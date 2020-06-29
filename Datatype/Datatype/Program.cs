@@ -10,11 +10,19 @@ namespace Datatype
     {
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            //Console.Clear();
+
+
+
             Console.WriteLine("Hello");
 
             //The smallest datatype, only for few numbers.
             sbyte codeNumber = 1;
             Console.WriteLine(codeNumber);
+
+            
 
             //Show error - only operation with int or more complex data types;
             //sbyte num1 = 10;
@@ -24,7 +32,7 @@ namespace Datatype
             int num1 = 10;
             int num2 = 5;
             int sum = num1 + num2;
-            Console.WriteLine("number 01 is "+ num1 + "number 2 is "+ num2 + "sum = ");
+            Console.WriteLine("number 01 is "+ num1 + " ,number 2 is "+ num2 + " ,sum = "+ sum);
 
             float f1 = 3.5F;
             double f2 = 3.5;
@@ -32,6 +40,7 @@ namespace Datatype
             string myStr = "molinaro";
             Console.WriteLine("My surname is "+ myStr);
             Console.WriteLine(myStr.ToUpper());
+
 
             //A data type is a value type if it holds a data value within its own memory space. 
             //It means the variables of these data types directly contain values.
