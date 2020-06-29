@@ -52,6 +52,36 @@ namespace Datatype
             string mydoubleConverted = f2.ToString();
 
             Console.WriteLine(myfloatConverted);
+
+            string age = "39";
+            int nameConverted = Int32.Parse(age);
+
+            //////////////////////////////////
+            //string roomNumber = "33A";
+            //int roomConverted = Int32.TryParse(roomNumber , out int result);
+
+            sbyte ageC = sbyte.Parse(age);
+            int ageI = Int16.Parse(age);
+            int ageII = Int32.Parse(age);
+            double ageD = Double.Parse(age);
+            Console.WriteLine(ageD);
+
+            string one = "I control text";
+            Console.WriteLine(string.Format("this is how {0}", one));
+
+
+            string two = "1981";
+            string sumTwo = one + two;
+
+            int twoC = Int32.Parse(two);
+
+
+            //Constant of primitive data type.
+            const int notChange = 5;
+            twoC = twoC + notChange;
+
+
+
         }
     }
 }
