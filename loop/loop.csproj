@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F14DD931-9961-4B83-A867-854045919D80}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>loop01</RootNamespace>
-    <AssemblyName>loop01</AssemblyName>
+    <RootNamespace>loop</RootNamespace>
+    <AssemblyName>loop</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
