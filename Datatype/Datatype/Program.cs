@@ -80,7 +80,7 @@ namespace Datatype
             const int notChange = 5;
             twoC = twoC + notChange;
 
-
+        Console.ReadKey();
 
         }
     }
