@@ -1,6 +1,8 @@
 ﻿using System;
 
-namespace hello {
+namespace hello 
+{
+    
     class Program {
         
         static void Main(string[] args) 
@@ -10,7 +12,7 @@ namespace hello {
             var date = DateTime.Now;
             Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");
             Console.Write("\nPress any key to exit...");
-            Console.ReadKey(true);
+            Console.ReadKey();
 
         }
     }
