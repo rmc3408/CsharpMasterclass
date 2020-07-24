@@ -6,29 +6,22 @@ namespace Edabit
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine(CreatePhoneNumber(new int[]{1,2,3,4,5,6,7,8,9,0}));
+            System.Console.WriteLine(CreatePhoneNumber("abracadabra"));
         }
-        public static string CreatePhoneNumber(int[] numbers)
+        public static int CreatePhoneNumber(string inputStr)
         {
-            String.Format("({0}{1}{2}) {3}{4}{5}-{6}{7}{8}{9}", numbers.Select(x=>(object)x).ToArray());
+            int num_vowels = 0;
 
-
-            string seq;
-            string phone = "(";
-            for (int i = 0; i < 10; i++)
+            foreach (char i in inputStr)
             {
-                seq = numbers[i].ToString();
-                if(i == 3){
-                    phone += ") ";
+                if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u')
+                {
+                    num_vowels++;
                 }
-                if(i == 6){
-                    phone += "-";
-                }
-                phone += seq;
             }
-            return phone;
+            return num_vowels;
+
+
         }
-
-
     }
 }
