@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Array
 {
@@ -29,7 +25,7 @@ namespace Array
             int counter = 0;
             foreach (int item in groupA)
             {
-                Console.WriteLine("index " + counter + " - element value "+ item);
+                Console.WriteLine("index " + counter + " - element value " + item);
                 counter++;
             }
 
@@ -38,17 +34,26 @@ namespace Array
 
             Console.Write("Enter a Value: ");
             var input = Console.ReadLine();
-                      
+
 
             Console.WriteLine("Select a DataType to validate the input u have entered: ");
             int results = int.Parse(Console.ReadLine());
 
-            string decision = "";
+            string decision = string.Empty;
             switch (results)
             {
                 case 1:
                     Console.WriteLine("You have entered a value: " + input);
-                    Console.WriteLine($"It is a valid : String");
+                    if (isAlphabetic(input))
+                    {
+                        decision = "valid";
+                        Console.WriteLine($"It is a {decision} : String");
+                    }
+                    else
+                    {
+                        decision = "Invalid";
+                        Console.WriteLine($"It is a {decision} : String");
+                    }
                     break;
                 case 2:
                     Console.WriteLine("You have entered a value: " + input);
@@ -79,8 +84,18 @@ namespace Array
                 default:
                     break;
             }
-            
-           
+            static bool isAlphabetic(string value)
+            {
+                foreach (char val in value)
+                {
+                    if (!char.IsLetter(val))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
 
             Console.ReadKey();
 
