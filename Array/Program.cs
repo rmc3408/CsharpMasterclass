@@ -6,6 +6,14 @@ namespace Array
     {
         static void Main(string[] args)
         {
+            //multidimensional Array
+
+            int[,] array2D = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+            Console.WriteLine(array2D[1,1]);
+            Console.WriteLine(array2D[2,0]);
+            
+            
+            
             int[] groupX = { 1, 2, 3, 4, 5, 6 };
             int[] groupA = new int[3];
             int[] groupB = new int[] { 10, 20 };
@@ -13,6 +21,7 @@ namespace Array
             groupA[0] = 6;
             groupA[1] = 8;
             groupA[2] = 1;
+
 
             //Print array and length in C#
 
