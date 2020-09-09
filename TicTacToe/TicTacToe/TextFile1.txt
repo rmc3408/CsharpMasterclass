@@ -13,7 +13,7 @@ namespace TicTacToe
                 {'7','8','9'}   //Row 2
             };
 
-    static int turns = 0;
+    
 
     static void Main(string[] args)
     {
