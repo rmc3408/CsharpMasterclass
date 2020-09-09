@@ -7,8 +7,6 @@ namespace Array
         static void Main(string[] args)
         {
             
-            
-            
             //declare and initialize Arrays
             int[] groupX = { 1, 2, 3, 4, 5, 6 };
             int[] groupA = new int[3];
@@ -20,7 +18,6 @@ namespace Array
 
 
             //Jagged Array
-
             int[][] jArray = new int[][]
             {
                 new int[]{1,2,3,4,5},
@@ -40,7 +37,7 @@ namespace Array
 
             }
 
-            
+            // Jagged array and using random method class
             string[][] friend = new string[3][]
             {
                 new string[2]{ "Launa", "Raph" },
@@ -50,8 +47,6 @@ namespace Array
             Random rnd = new Random();
             Console.WriteLine("\n\nI would like to introduce {0} to {1}"
                 , friend[rnd.Next(3)][rnd.Next(2)], friend[rnd.Next(3)][rnd.Next(2)]);
-
-
 
             //multidimensional Array
 
@@ -76,12 +71,14 @@ namespace Array
                 counter++;
             }
 
+            //Passing array as Argument in function.
+
+
+
+
             //Exercise 01
-
-
             Console.Write("Enter a Value: ");
             var input = Console.ReadLine();
-
 
             Console.WriteLine("Select a DataType to validate the input u have entered: ");
             int results = int.Parse(Console.ReadLine());
@@ -131,6 +128,7 @@ namespace Array
                 default:
                     break;
             }
+            //Belongs to Exercise 01
             static bool isAlphabetic(string value)
             {
                 foreach (char val in value)
