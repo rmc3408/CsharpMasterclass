@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Collections;
 
 namespace Array
 {
     class Program
     {
+        //Passing array as Argument in function.
+        
+        
+
         static void Main(string[] args)
         {
+
             
+
             //declare and initialize Arrays
             int[] groupX = { 1, 2, 3, 4, 5, 6 };
             int[] groupA = new int[3];
@@ -15,6 +22,48 @@ namespace Array
             groupA[0] = 6;
             groupA[1] = 8;
             groupA[2] = 1;
+
+            //declare and initialize ArrayLIST
+            ArrayList myAL = new ArrayList();     //not limits pre-defined
+
+            //Can store int, string , objects,...
+            myAL.Add(39);
+            myAL.Add("Raph");
+            myAL.Add(80.6);
+            myAL.Add("Hungry");
+            myAL.Add(new int[]{ 1,2 }); 
+            myAL.Add(80.5);
+            myAL.Add(80.6);
+
+            myAL.Remove(80.6); //remove by value
+            myAL.RemoveAt(5); //remove by index
+
+            foreach (object mini in myAL)
+            {
+                if(mini is int[])                           // IS is comparative between code!!
+                {
+                    Console.Write("The array location is ");
+                }
+                Console.WriteLine($"The value is {mini}");
+            }
+
+            
+            //Passing array as Argument in function.
+            int[] array1D = new int[] { 1, 2, 3, 4, 5, 6 };
+            Console.WriteLine(Soma(array1D));
+
+            static double Soma(int[] array)
+            {
+                int sum = 0;
+                int counter = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    sum = sum + array[i];
+                    counter++;
+                }
+                double avg = (double)sum / counter;
+                return avg;
+            }
 
 
             //Jagged Array
@@ -71,11 +120,28 @@ namespace Array
                 counter++;
             }
 
-            //Passing array as Argument in function.
+            
+            //challenge Argument Methods with array
 
+            int[] happinessLevel = { 1, 2 };
+            
+            IsSunshineGood(happinessLevel);
+            foreach (int item in happinessLevel)
+            {
+                Console.WriteLine(item);
+            }
 
+            static void IsSunshineGood(int[] level)
+            {
+                foreach (int item in level)
+                {
+                    int nl = item * 2;
+                    Console.WriteLine(nl);
+                }
+                
+            }
 
-
+            
             //Exercise 01
             Console.Write("Enter a Value: ");
             var input = Console.ReadLine();
@@ -128,6 +194,11 @@ namespace Array
                 default:
                     break;
             }
+
+
+
+
+
             //Belongs to Exercise 01
             static bool isAlphabetic(string value)
             {
@@ -141,7 +212,7 @@ namespace Array
                 return true;
             }
 
-
+            
             Console.ReadKey();
 
         }
