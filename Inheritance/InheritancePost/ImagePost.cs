@@ -6,15 +6,13 @@ using System.Threading.Tasks;
 
 namespace InheritancePost
 {
-    class ImagePost:Post
+    class ImagePost : Post
     {
         public string ImageURL { get; set; }
 
-        public ImagePost()
-        {
+        public ImagePost() {}
 
-        }
-        public ImagePost(string tit, string send, bool isP, string url)
+        public ImagePost(string tit, bool isP, string send, string url)
         {
             this.ID = GetNextID();
             this.Title = tit;
@@ -23,6 +21,10 @@ namespace InheritancePost
 
             this.ImageURL = url;
 
+        }
+        public override string ToString()
+        {
+            return $"{this.ID} - url:{this.ImageURL} - {this.Title} by {this.SendBy}";
         }
     }
 }

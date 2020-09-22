@@ -8,7 +8,7 @@ namespace InheritancePost
 {
     class Post
     {
-        private int currentPostId { get; set; }
+        private static int currentPostId { get; set; }
 
         protected int ID { get; set; }
         protected string Title { get; set; }
@@ -25,10 +25,10 @@ namespace InheritancePost
         }
         public Post(string tit, bool isP, string send)
         {
-            ID = GetNextID();
+            this.ID = GetNextID();
             this.Title = tit;
             this.IsPublic = isP;
-            SendBy = send;
+            this.SendBy = send;
         }
         protected int GetNextID()
         {
@@ -37,11 +37,13 @@ namespace InheritancePost
         public void updateTitle(string tit, bool isP)
         {
             this.Title = tit;
+            this.IsPublic = isP;
+
 
         }
         public override string ToString()
         {
-            return $"{ID} - {Title} by {SendBy}";
+            return $"{this.ID} - {this.Title} by {this.SendBy}";
         }
     }
 }
