@@ -8,6 +8,7 @@ namespace InheritancePost
 {
     class ImagePost : Post
     {
+        
         public string ImageURL { get; set; }
 
         public ImagePost() {}

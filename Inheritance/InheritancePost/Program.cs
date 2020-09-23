@@ -16,6 +16,10 @@ namespace InheritancePost
             ImagePost img1 = new ImagePost("my github", true, "Raph",
                 "https://github.com/rmc3408");
             Console.WriteLine(img1.ToString());
+
+            VideoPost vid1 = new VideoPost("my youtube", true, "Raphael",
+                "https://youtube.ca", 360);
+            Console.WriteLine(vid1.ToString());
         }
     }
 }
