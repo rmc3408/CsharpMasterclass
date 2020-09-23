@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace InheritancePost
 {
     class VideoPost : Post
     {
+        private int currentTime = 0;
+        Timer crono;
+        private bool isPlaying = false;
+
         public string VideoURL { get; set; }
         public int Length { get; set; }
 
@@ -22,6 +27,42 @@ namespace InheritancePost
 
             this.VideoURL = url; 
             this.Length = len;
+
+        }
+        public void Play()
+        {
+            if (!isPlaying)
+            {
+                isPlaying = true;
+                Console.WriteLine("Start Playing");
+                crono = new Timer(TimerCallback, null, 0, 1000);
+                //Continue to TimerCallback funtion
+                GC.Collect();
+
+            }
+        }
+        private void TimerCallback(Object runningTime)
+        {
+            if (currentTime < Length)
+            {
+                currentTime++;
+                Console.WriteLine($"Video at {currentTime} sec");
+            }
+            else
+            {
+                Stop();
+            }
+            
+        }
+        public void Stop()
+        {
+            if (isPlaying)
+            {
+                Console.WriteLine($"Video Stopped!!");
+                currentTime = 0;
+                isPlaying = false;
+                crono.Dispose();
+            }
 
         }
         public override string ToString()

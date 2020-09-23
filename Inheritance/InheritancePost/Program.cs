@@ -18,8 +18,15 @@ namespace InheritancePost
             Console.WriteLine(img1.ToString());
 
             VideoPost vid1 = new VideoPost("my youtube", true, "Raphael",
-                "https://youtube.ca", 360);
+                "https://youtube.ca", 14);
             Console.WriteLine(vid1.ToString());
+
+            Console.ReadKey();
+            vid1.Play();
+            Console.WriteLine("press any key to stop");
+            Console.ReadKey();
+            vid1.Stop();
+            Console.ReadKey();
         }
     }
 }
