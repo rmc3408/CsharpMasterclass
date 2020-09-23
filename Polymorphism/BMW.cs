@@ -21,7 +21,7 @@ namespace Polymorphism
             }
             set
             {
-                brand = "Expensive" + value;
+                brand = "Expensive " + value;
             }
         }
 
@@ -30,11 +30,11 @@ namespace Polymorphism
             Brand = br;
             Model = mo;
         }
-        public void ShowDetails()
+        public override void ShowDetails()
         {
             Console.WriteLine("The color is {0}, speed force is {1}, brand is {2} and model {3}", Color, HP, Brand, Model);
         }
-        public void Repair()
+        public override void Repair()
         {
             Console.WriteLine("The expensive car was repaired");
         }

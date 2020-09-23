@@ -18,11 +18,11 @@ namespace Polymorphism
             HP = hp;
             Color = co;
         }
-        public void ShowDetails()
+        public virtual void ShowDetails()
         {
             Console.WriteLine("The color is {0} and speed force is {1}", Color, HP);
         }
-        public void Repair()
+        public virtual void Repair()
         {
             Console.WriteLine("The car was repaired");
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Polymorphism
 {
@@ -14,7 +15,19 @@ namespace Polymorphism
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var cars = new List<Car>
+            {
+                new BMW("orange", 200, "M3", "family"),
+                new Audi("yellow", 400, "A4", "sport")
+
+            };
+            foreach(Car item in cars)
+            {
+                Console.WriteLine(item.GetType()); 
+                item.Repair();
+                item.ShowDetails();
+                Console.WriteLine("---------------------\n");
+            }
         }
     }
 }
