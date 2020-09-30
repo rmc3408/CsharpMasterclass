@@ -23,11 +23,29 @@ namespace Polymorphism
             };
             foreach(Car item in cars)
             {
+                if (item is Car)
+                {
+                    Console.WriteLine("\n"+ item + " is a Car");
+                    if (item is BMW)
+                    {
+                        Console.WriteLine(item + " is a BMW");
+                    }
+                    if (item is Audi)
+                    {
+                        Console.WriteLine(item + " is a Audi");
+                    }
+                }
+
                 Console.WriteLine(item.GetType()); 
                 item.Repair();
                 item.ShowDetails();
+               
                 Console.WriteLine("---------------------\n");
             }
+            Car b23 = new BMW("white", 23, "channel", "rich");
+            b23.SetCarIDInfo(301, "Drake");
+            b23.GetInfoCar();
+
         }
     }
 }

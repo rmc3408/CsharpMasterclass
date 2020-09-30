@@ -30,7 +30,12 @@ namespace Polymorphism
             Brand = br;
             Model = mo;
         }
-        public override void ShowDetails()
+
+        // new is definitive change = derived and base class
+        // override is flexible change
+        // Sealed block derived override change This method base.
+
+        public new void ShowDetails()
         {
             Console.WriteLine("The color is {0}, speed force is {1}, brand is {2} and model {3}", Color, HP, Brand, Model);
         }

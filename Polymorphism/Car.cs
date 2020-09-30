@@ -13,11 +13,24 @@ namespace Polymorphism
         protected int HP { get; set; }
         protected string Color { get; set; }
 
+        protected CarIDInfo info = new CarIDInfo();
+        public void SetCarIDInfo(int id, string owner)
+        {
+            info.IDNum = id;
+            info.Owner = owner;
+        }
+        public void GetInfoCar()
+        {
+            Console.WriteLine("the car has ID:{0} and owned by {1}", info.IDNum, info.Owner );
+        }
+
         public Car(string co, int hp)
         {
             HP = hp;
             Color = co;
         }
+
+        //virtual allow to override
         public virtual void ShowDetails()
         {
             Console.WriteLine("The color is {0} and speed force is {1}", Color, HP);
