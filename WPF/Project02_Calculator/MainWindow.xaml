@@ -30,7 +30,7 @@
                HorizontalAlignment="Right" 
                Background="White"/>
 
-        <Button Margin="5" x:Name="acLabel" Content="AC" Grid.Row="1" Grid.Column="0"/>
+        <Button Margin="5" x:Name="acLabel" Click="acLabel_Click" Content="AC" Grid.Row="1" Grid.Column="0"/>
         <Button Margin="5" x:Name="invertLabel" Content="+/-" Grid.Row="1" Grid.Column="1"/>
         <Button Margin="5" x:Name="percentLabel" Content="%" Grid.Row="1" Grid.Column="2"/>
         <Button Margin="5" x:Name="divideLabel" Content="/" Grid.Row="1" Grid.Column="3"/>

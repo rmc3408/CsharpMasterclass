@@ -23,6 +23,16 @@ namespace Project02_Calculator
         public MainWindow()
         {
             InitializeComponent();
+            resultLabel.Content = "33";
+
+        }
+
+        private void acLabel_Click(object sender, RoutedEventArgs e)
+        {
+            if(resultLabel.Content != "0")
+            {
+                resultLabel.Content = "0";
+            }
         }
     }
 }
