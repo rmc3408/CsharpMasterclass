@@ -20,16 +20,53 @@ namespace Project02_Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        double lastNum;
+        double result;
+
         public MainWindow()
         {
             InitializeComponent();
             resultLabel.Content = "33";
 
+            //instead to call event in xaml
+            invertLabel.Click += InvertLabel_Click;
+            percentLabel.Click += PercentLabel_Click;
+            equalLabel.Click += EqualLabel_Click;
+
+        }
+
+        private void EqualLabel_Click(object sender, RoutedEventArgs e)
+        {
+            resultLabel.Content = result.ToString();
+        }
+
+        private void PercentLabel_Click(object sender, RoutedEventArgs e)
+        {
+            lastNum = double.Parse(resultLabel.Content.ToString());
+            if (lastNum < 1)
+            {
+                lastNum = lastNum*100;
+                resultLabel.Content = lastNum.ToString();
+            }
+            else
+            {
+                lastNum = lastNum / 100;
+                resultLabel.Content = lastNum.ToString();
+            }
+            
+        }
+
+        private void InvertLabel_Click(object sender, RoutedEventArgs e)
+        {
+            lastNum = double.Parse(resultLabel.Content.ToString());
+            lastNum = -lastNum;
+            resultLabel.Content = lastNum.ToString();
         }
 
         private void acLabel_Click(object sender, RoutedEventArgs e)
         {
-            if(resultLabel.Content != "0")
+            if(resultLabel.Content.ToString() != "0")
             {
                 resultLabel.Content = "0";
             }
@@ -37,7 +74,7 @@ namespace Project02_Calculator
 
         private void sevenLabel_Click(object sender, RoutedEventArgs e)
         {
-            if (sevenLabel.Content != "0")
+            if (sevenLabel.Content.ToString() != "0")
             {
                 resultLabel.Content = $"{resultLabel.Content}7";
             }
