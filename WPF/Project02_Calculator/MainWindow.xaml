@@ -9,52 +9,49 @@
     <Grid>
         <Grid.Margin>10</Grid.Margin>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Label x:Name="resultLabel" Content="0" 
+        <Label x:Name="resultLabel" Content="0"
                FontSize="48"
-               Grid.ColumnSpan="4" 
-               VerticalAlignment="Bottom" 
-               HorizontalAlignment="Right" 
-               Background="White"/>
+               Grid.ColumnSpan="4"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Right"
+               Background="White" />
 
-        <Button Margin="5" x:Name="acLabel" Click="acLabel_Click" Content="AC" Grid.Row="1" Grid.Column="0"/>
-        <Button Margin="5" x:Name="invertLabel" Content="+/-" Grid.Row="1" Grid.Column="1"/>
-        <Button Margin="5" x:Name="percentLabel" Content="%" Grid.Row="1" Grid.Column="2"/>
-        <Button Margin="5" x:Name="divideLabel" Content="/" Grid.Row="1" Grid.Column="3"/>
+        <Button Margin="5" x:Name="acLabel" Click="acLabel_Click" Content="AC" Grid.Row="1" Grid.Column="0" />
+        <Button Margin="5" x:Name="invertLabel" Content="+/-" Grid.Row="1" Grid.Column="1" />
+        <Button Margin="5" x:Name="percentLabel" Content="%" Grid.Row="1" Grid.Column="2" />
+        <Button Margin="5" x:Name="divideLabel" Content="/" Grid.Row="1" Grid.Column="3" />
 
-        <Button Margin="5" x:Name="sevenLabel" Content="7" Grid.Row="2" Grid.Column="0"/>
-        <Button Margin="5" x:Name="eightLabel" Content="8" Grid.Row="2" Grid.Column="1"/>
-        <Button Margin="5" x:Name="nineLabel" Content="9" Grid.Row="2" Grid.Column="2"/>
-        <Button Margin="5" x:Name="multLabel" Content="*" Grid.Row="2" Grid.Column="3"/>
+        <Button Margin="5" x:Name="sevenLabel" Click="sevenLabel_Click" Content="7" Grid.Row="2" Grid.Column="0" />
+        <Button Margin="5" x:Name="eightLabel" Content="8" Grid.Row="2" Grid.Column="1" />
+        <Button Margin="5" x:Name="nineLabel" Content="9" Grid.Row="2" Grid.Column="2" />
+        <Button Margin="5" x:Name="multLabel" Content="*" Grid.Row="2" Grid.Column="3" />
 
-        <Button Margin="5" x:Name="fourLabel" Content="4" Grid.Row="3" Grid.Column="0"/>
-        <Button Margin="5" x:Name="fiveLabel" Content="5" Grid.Row="3" Grid.Column="1"/>
-        <Button Margin="5" x:Name="sixLabel" Content="6" Grid.Row="3" Grid.Column="2"/>
-        <Button Margin="5" x:Name="sumLabel" Content="+" Grid.Row="3" Grid.Column="3"/>
+        <Button Margin="5" x:Name="fourLabel" Content="4" Grid.Row="3" Grid.Column="0" />
+        <Button Margin="5" x:Name="fiveLabel" Content="5" Grid.Row="3" Grid.Column="1" />
+        <Button Margin="5" x:Name="sixLabel" Content="6" Grid.Row="3" Grid.Column="2" />
+        <Button Margin="5" x:Name="sumLabel" Content="+" Grid.Row="3" Grid.Column="3" />
 
-        <Button Margin="5" x:Name="oneLabel" Content="1" Grid.Row="4" Grid.Column="0"/>
-        <Button Margin="5" x:Name="twoLabel" Content="2" Grid.Row="4" Grid.Column="1"/>
-        <Button Margin="5" x:Name="threeLabel" Content="3" Grid.Row="4" Grid.Column="2"/>
-        <Button Margin="5" x:Name="minusLabel" Content="-" Grid.Row="4" Grid.Column="3"/>
+        <Button Margin="5" x:Name="oneLabel" Content="1" Grid.Row="4" Grid.Column="0" />
+        <Button Margin="5" x:Name="twoLabel" Content="2" Grid.Row="4" Grid.Column="1" />
+        <Button Margin="5" x:Name="threeLabel" Content="3" Grid.Row="4" Grid.Column="2" />
+        <Button Margin="5" x:Name="minusLabel" Content="-" Grid.Row="4" Grid.Column="3" />
 
-        <Button Margin="5" x:Name="zeroLabel" Content="0" Grid.Row="5" Grid.ColumnSpan="2"/>
-        <Button Margin="5" x:Name="commaLabel" Content="," Grid.Row="5" Grid.Column="2"/>
-        <Button Margin="5" x:Name="equalLabel" Content="=" Grid.Row="5" Grid.Column="3"/>
-        
-
-
+        <Button Margin="5" x:Name="zeroLabel" Content="0" Grid.Row="5" Grid.ColumnSpan="2" />
+        <Button Margin="5" x:Name="commaLabel" Content="," Grid.Row="5" Grid.Column="2" />
+        <Button Margin="5" x:Name="equalLabel" Content="=" Grid.Row="5" Grid.Column="3" />
     </Grid>
 </Window>

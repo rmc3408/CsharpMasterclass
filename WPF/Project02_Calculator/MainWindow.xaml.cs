@@ -34,5 +34,17 @@ namespace Project02_Calculator
                 resultLabel.Content = "0";
             }
         }
+
+        private void sevenLabel_Click(object sender, RoutedEventArgs e)
+        {
+            if (sevenLabel.Content != "0")
+            {
+                resultLabel.Content = $"{resultLabel.Content}7";
+            }
+            else
+            {
+                resultLabel.Content = "7";
+            }
+        }
     }
 }
