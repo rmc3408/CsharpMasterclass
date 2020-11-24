@@ -60,16 +60,26 @@ namespace Project02_Calculator
 
         private void PercentLabel_Click(object sender, RoutedEventArgs e)
         {
-            lastNum = double.Parse(resultLabel.Content.ToString());
-            if (lastNum <= 1)
+
+            double tempNum;
+            tempNum = double.Parse(resultLabel.Content.ToString());
+            if (tempNum <= 1)
             {
-                lastNum = lastNum * 100;
-                resultLabel.Content = lastNum.ToString();
+                tempNum = tempNum * 100;
+                if (lastNum != 0)
+                {
+                    tempNum += lastNum;
+                }
+                resultLabel.Content = tempNum.ToString();
             }
             else
             {
-                lastNum = lastNum / 100;
-                resultLabel.Content = lastNum.ToString();
+                tempNum = tempNum / 100;
+                if (lastNum != 0)
+                {
+                    tempNum *= lastNum;
+                }
+                resultLabel.Content = tempNum.ToString();
             }
         }
 

@@ -99,6 +99,9 @@ namespace del
             // Call display method, send anonymous delegate function (one param and one string return)
             Display(welcomeName);
 
+
+
+
             Console.WriteLine("\n");
 
             Console.WriteLine(benVindo("Luana"));
